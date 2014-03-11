@@ -1,0 +1,1 @@
+console.log("Kalamuna"),function(){}(window.kala=window.kala||{},jQuery);

@@ -1,0 +1,42 @@
+//////////////////////////////
+// Bootstrap Component
+//
+// The partial and folder structure for this component should be as follows:
+// _bootstrap.scss
+// bootstrap (folder)
+//   _mixins.scss
+//   _extends.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base component: @{component}
+//  - End styling block for base component:   {component}@
+//
+//  - Start styling block for specific component configuration: @{component--configuration}
+//  - End styling block for specific component configuration:   {component--configuration}@
+//////////////////////////////
+
+@import "bootstrap/mixins";
+@import "bootstrap/extends";
+
+//////////////////////////////
+// Having $output-selectors and $output-selectors--bootstrap set to `true` will output the CSS selectors for BootstrapComponent
+$output-selectors--bootstrap: true !default;
+@if $output-selectors and $output-selectors--bootstrap {
+//////////////////////////////
+
+//////////////////////////////
+// @{bootstrap}
+// Styling for Bootstrap Component
+
+// {bootstrap}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{bootstrap--pulldown}
+// Pulldown styling for Bootstrap Component
+
+// {bootstrap--pulldown}@
+//////////////////////////////
+
+}

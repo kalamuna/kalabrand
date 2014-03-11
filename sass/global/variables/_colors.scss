@@ -1,0 +1,126 @@
+//////////////////////////////
+// Colors
+//////////////////////////////
+
+$c-link-color: #333;
+
+$kala-magenta: #d54688;
+$kala-orange: #ea8b35;
+$kala-yellow: #ecca34;
+$kala-green: #94bf32;
+$kala-blue: #3f96d6;
+$kala-violet: #bfaed3;
+
+$black: #161616;
+$white: #fefefe;
+$gray: mix($black, $white);
+// $cs-primary: #fdb252;
+
+
+//////////////////////////////
+// Color Stacks
+//
+// We can utilize [Color Schemer](https://github.com/scottkellum/color-schemer)
+//   to build us awesome color guides.
+//////////////////////////////
+// Primary color, can be any color you can use in CSS, plus CMYK from Color Schemer
+// $cs-scheme:             accented-analogic;
+// Options: mono, complement, triad, tetrad, analogic, accented-analogic
+//$cs-hue-offset:         42;
+// Options: 0-100;
+//$cs-brightness-offset:  10;
+// Options: 0-100;
+//$cs-color-model:        ryb;
+// Options: rgb, ryb
+
+@function kala-colorset ( $from ) {
+	$c1: $from;
+	$c2: darken( mix($from,$c1), 15 );
+	$c3: darken( mix($c1,$c2), 15 );
+	$c4: darken( mix($c2,$c3), 15 );
+	$c5: saturate( darken( mix($c3,$c4), 15 ), 30 );
+	$c6: darken( mix($c4,$c5), 15 );
+	@return $c1,$c2,$c3,$c4,$c5,$c6;
+}
+
+$black-tints: tint-stack($black);
+$primary-tints: tint-stack(cs-primary());
+$secondary-tints: tint-stack(cs-secondary());
+$tertiary-tints: tint-stack(cs-tertiary());
+$quaternary-tints: tint-stack(cs-quadrary());
+$primary-shades: shade-stack(cs-primary());
+$secondary-shades: shade-stack(cs-secondary());
+$tertiary-shades: shade-stack(cs-tertiary());
+$quaternary-shades: shade-stack(cs-quadrary());
+
+$kala-colors: $kala-orange, $kala-magenta, $kala-violet, $kala-blue, $kala-green, $kala-yellow;
+$kala-oranges: $kala-orange, #d24309, #ce3a07, #b51901, #9f0b00, #780200;
+$kala-magentas: $kala-magenta, #ab0f40, #a30c37, #7d0217, #5f0109, #390002;
+$kala-violets: $kala-violet, #7b669a, #715e8f, #453561, #231a37, #090611;
+$kala-blues: $kala-blue, #0d4fad, #0a46a5, #012584, #000f62, #00033d;
+$kala-greens: $kala-green, #4d8608, #447d06, #235801, #0e3600, #031800;
+$kala-yellows: $kala-yellow, #d28f06, #daa00b, #be6b01, #a64800, #812200;
+
+
+// parametric route didn't work as well.
+$kala-orange-tints: tint-stack($kala-orange);
+$kala-orange-shades: shade-stack($kala-orange);
+$kala-magenta-tints: tint-stack($kala-magenta);
+$kala-magenta-shades: shade-stack($kala-magenta);
+$kala-violet-tints: tint-stack($kala-violet);
+$kala-violet-shades: shade-stack($kala-violet);
+$kala-blue-tints: tint-stack($kala-blue);
+$kala-blue-shades: shade-stack($kala-blue);
+$kala-green-tints: tint-stack($kala-green);
+$kala-green-shades: shade-stack($kala-green);
+$kala-yellow-tints: tint-stack($kala-yellow);
+$kala-yellow-shades: shade-stack($kala-yellow);
+
+$cs-secondary: cs-secondary();
+
+// link colors
+$cs-link-normal: nth($quaternary-shades, 2);
+$cs-link-hover: nth($quaternary-shades, 3);
+$cs-link-active: nth($quaternary-tints, 2);
+$cs-link-visited: nth($quaternary-shades, 4);
+$cs-link-focus: nth($quaternary-shades, 4);
+$cs-link-border-normal: nth($quaternary-shades, 2);
+$cs-link-border-hover: nth($quaternary-shades, 3);
+$cs-link-border-active: nth($quaternary-tints, 2);
+$cs-link-border-visited: nth($quaternary-shades, 4);
+$cs-link-border-focus: nth($quaternary-shades, 4);
+
+//////////////////////////////
+// Background Colors
+//////////////////////////////
+$cs-background: $white;
+
+//////////////////////////////
+// Text Colors
+//////////////////////////////
+$cs-text-dark: $black;
+$cs-text-light: $white;
+$cs-text: $cs-text-dark;
+
+//////////////////////////////
+// Border Colors
+//////////////////////////////
+$cs-border: $gray;
+
+//////////////////////////////
+// Status Colors
+//////////////////////////////
+$cs-status-status: lighten( $kala-blue, 40 );
+$cs-status-warning: lighten( $kala-yellow, 40 );
+$cs-status-error: lighten( $kala-magenta, 40 );
+
+//////////////////////////////
+// Component defaults
+//////////////////////////////
+// Buttons
+$cs-button-color-default: $gray;
+//////////////////////////////
+// Messages
+$cs-message-text-color-default: nth($secondary-tints, 1);
+$cs-message-bkg-color-default: $cs-status-status;
+//////////////////////////////

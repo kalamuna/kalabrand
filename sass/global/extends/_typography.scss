@@ -1,0 +1,23 @@
+%serif {
+  font-family: $font-serifs;
+}
+
+%sans {
+  font-family: $font-sans;
+}
+
+%mono {
+  font-family: $font-mono;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+////////////////////////
+// General type styles
+//
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
