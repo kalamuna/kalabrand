@@ -35,14 +35,6 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consec
       {{/for}}
     </ul>
   </div>
-  <div class="images group">
-    <h4>Inspiration</h4>
-    <ul>
-      {{#each options.grunt.userConfig.styleTile.images}}
-        {{{possible-pattern @index this ../this}}}
-      {{/each}}
-    </ul>
-  </div>
   <div class="keywords group">
     {{#each options.grunt.userConfig.styleTile.keywords}}
     <span class="keyword-{{@index}}">{{this}}</span>

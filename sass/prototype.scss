@@ -113,26 +113,6 @@ h2 {
 	color: $kala-magenta;
 }
 
-#header {
-	padding: 2em;
-}
-.content-wrapper {
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-#prototype-section--main {
-	padding: 0 2em 2em 2em;
-	article {
-		padding: 1em 2em 2em 2em;
-//		background: rgba( white, .65 );
-		  @include background-image(
-		  	linear-gradient( rgba( white, .8 ) 80%, rgba( white, 0 ) )
-		  );
-  	}
-	background: transparent url(../images/backgrounds/mountains.png) repeat-x bottom center;
-}
-
 
 //////////////////////////////
 

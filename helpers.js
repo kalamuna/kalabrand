@@ -94,6 +94,17 @@ module.exports = {
     }
     return accum;
   },
+  'image-grid': function(index, src, context){
+    var output = "<li class='pattern-" + index + "'><img src='";
+    var ext = src.match('^(http|https):\/\/');
+    if (ext) {
+      output += src;
+    }else {
+      output += context.options.assets + '/' + context.options.userConfig.assets.imagesDir + '/' + src;
+    }
+    output += "'></li>";
+    return output;
+  },
   'possible-pattern': function(index, src, context) {
     var output = "<li class='pattern-" + index + "'><img src='";
 
