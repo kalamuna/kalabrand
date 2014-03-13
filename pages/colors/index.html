@@ -7,7 +7,11 @@
   <ul>
     {{#each options.grunt.userConfig.colors.variables}}
       {{#for 1 7 1}}
-    <li data-sass="nth(${{../this}}, {{this}})"></li>
+    <li class="tooltip-container">
+    	<div class="tooltip-element">
+				nth(${{../this}}, {{this}})"
+    	</div>
+    </li>
       {{/for}}
     {{/each}}
   </ul>

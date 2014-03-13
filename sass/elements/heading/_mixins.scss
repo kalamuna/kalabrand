@@ -5,7 +5,7 @@
 //////////////////////////////
 // Header Element Default Variables
 $heading-base-extend: true !default;
-$heading-sizes: ms(4.5) ms(3.25) ms(2.5) ms(1.75) ms(1.25) ms(1) !default;
+$heading-sizes: ms(4.25) ms(3.25) ms(2.25) ms(1.5) ms(1.25) ms(1) !default;
 //////////////////////////////
 
 @mixin heading-base($extend: $heading-base-extend) {

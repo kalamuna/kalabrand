@@ -1,0 +1,70 @@
+@mixin tooltip-element( $bg: $tooltip-default-color, $z: 10, $min-height: 3em ) {
+	z-index: $z;
+	background: $bg;
+	box-shadow: 0 1px 1px rgba( nth($kala-yellows,5), .8 );
+	min-height: $min-height;
+  &::after {
+	  border-color:  $bg transparent;
+  }
+}
+
+%tooltip-element {
+	padding: .5em;
+	// width: 140%;
+	width: auto;
+//	max-width: $tooltip-max-width;
+	// left: -20%;
+	border-radius: .25rem;
+	font-size: 1rem;
+	&::after {
+		content: "";
+  	position: absolute;
+  	top: 100%;
+  	left: 50%;
+	  border-width: .75em .5em 0 .5em;
+	  border-style: solid;
+	}
+}
+
+%tooltip-container {
+	position:relative;
+	cursor: pointer;
+	.tooltip-element {
+		@extend %tooltip-element;
+		@include tooltip-element();
+		@include transition-property( opacity, bottom );
+	  @include transition-duration(.28s);
+	  @include transition-timing-function(ease-in-out);
+		visibility: hidden;
+		position: absolute;
+		bottom: 90%;
+		opacity: 0;
+		text-align: left;
+	}
+	&:active,
+	&:hover {
+		.tooltip-element {
+			visibility: visible;
+			bottom: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+%tooltipped-content {
+	&>div {
+		@extend %tooltip-container;
+	}
+}
+
+.tooltipped-content {
+	@extend %tooltipped-content;
+}
+
+.tooltip-container {
+	@extend %tooltip-container;
+}
+
+.notes {
+	margin-bottom: 1em;
+}

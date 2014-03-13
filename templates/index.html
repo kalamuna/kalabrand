@@ -4,20 +4,19 @@
     {{> style-prototype--shared-head}}
   </head>
 
-  <body>
+  <body class="{{slugify page.title}}">
     <div id="prototype-section--header">
       <div class="content-wrapper">
         {{> style-prototype--header}}
       </div>
     </div>
-
     <main id="prototype-section--main">
       <div class="content-wrapper">
         {{{body}}}
       </div>
     </main>
-
     <!-- JavaScript goes in the footer! -->
     {{> style-prototype--shared-foot}}
   </body>
+
 </html>

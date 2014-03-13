@@ -29,6 +29,11 @@ h3.accent {
 	padding: 2em;
 }
 
+
+.group.headers {
+	@include clearfix;
+	background: transparent url(../images/backgrounds/mountains.png) repeat-x bottom center;
+}
 // .navbar-header {
 // 	width: 200px;	
 // 	background: #dedede url( ../images/logo_small.png ) .5em center no-repeat !important;
@@ -45,11 +50,27 @@ h3.accent {
 	article {
 		padding: 1em 2em 2em 2em;
 	  @include background-image( linear-gradient( rgba( white, .8 ), rgba( white, .5 ) 50%, rgba( white, 0 ) ) );
-  	}
-	background: transparent url(../images/backgrounds/mountains.png) repeat-x bottom center;
+  }
 }
 
 .colors li {
 	width: 2em !important;
 	height: 2em !important;
+}
+
+.primary-content {
+	@include make-xs-column(12);
+	@include make-md-column(9);
+}
+
+figure.example {
+	@include make-xs-column(12);
+	@include make-sm-column( 6 );
+	figcaption {
+		margin-top: 1em;
+		background: nth( $black-tints, 6 );
+		padding: 1em;
+		border-radius: .5em;
+	}
+	margin-bottom: 3em;
 }

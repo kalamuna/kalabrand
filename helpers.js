@@ -240,17 +240,16 @@ module.exports = {
       for (var k in obj) {
         if (typeof(obj[k]) === 'object') {
           output += '<b role="menuitem" data-menu-toggle="closed">' + k + '</b>';
-          output += '\n<div class="nav-collapse in collapse" role="menubar">';
-          output += '\n<ul class="nav pull-right">';
+          output += '\n<div role="menubar">';
           recurseSections(obj[k]);
         }
         else {
           if (k !== 'undefined') {
-            output += '\n<li><a href="' + basePath + '/' + obj[k] + '" role="menuitem">' + k + '</a></li>';
+            output += '\n<a href="' + basePath + '/' + obj[k] + '" role="menuitem">' + k + '</a>';
           }
         }
       }
-      output += '\n</ul></div>';
+      output += '\n</div>';
     }
 
     for (var k in menu) {
@@ -271,6 +270,7 @@ module.exports = {
           output += '\n<b role="menuitem" data-menu-toggle="closed">' + k + '</b>';
 
           file = fs.readFileSync(sectionsPath).toString('utf-8');
+          output += '<div role="menubar">';
           output += '\n<a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a>';
           var sections = yaml.safeLoad(file);
           recurseSections(sections);
@@ -279,9 +279,84 @@ module.exports = {
     }
     return output;
   },
+  // custom helpers
   'highlight': function( arg, obj ) {
     var output = "";
     output += '<div class="highlight"><pre><code class="' + arg + '">' + obj.fn( this ) + "</code></pre></div>";
+    return output;
+  },
+  'slugify': function(){
+    if( this.page.title ) {
+      return _s.slugify( this.title );
+    } else {
+      return "no-slug";
+    }
+  },
+  ////////////////////////////////////////
+  // Bootstrap helpers
+  //
+  'bootstrap-thumbnail': function( obj ) {
+
+    var output = "<div class='thumbnail'>";
+
+    output += obj.fn( this );
+
+    output += "</div>";
+
+    return output;
+  },
+  'bootstrap-navigation': function(menu) {
+    var basePath = this.options.assets;
+    if (basePath === '/') {
+      basePath = '';
+    }
+    var path = basePath + this.options.userConfig.generator.pagesDir + '/';
+
+    var output = '<ul class="nav push-right">';
+
+    function recurseSections(obj) {
+      for (var k in obj) {
+        if (typeof(obj[k]) === 'object') {
+          output += '<li class="dropdown">'
+          output += '<b role="menuitem" data-menu-toggle="closed">' + k + '</b>';
+          output += '\n<ul class="dropdown-menu>';
+          recurseSections(obj[k]);
+        }
+        else {
+          if (k !== 'undefined') {
+            output += '\n<li><a href="' + basePath + '/' + obj[k] + '" role="menuitem">' + k + '</a></li>';
+          }
+        }
+      }
+      output += '\n</li>';
+    }
+
+    for (var k in menu) {
+      if (typeof(k) === 'string' && typeof(menu[k] === 'string')) {
+        var sectionsPath = path + menu[k];
+        if (menu[k] !== '') {
+          sectionsPath += '/';
+        }
+        sectionsPath += 'sections.yml';
+
+        var file = fs.existsSync(sectionsPath);
+
+        if (!file) {
+          output += '\n<a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a>';
+        }
+        else {
+
+          file = fs.readFileSync(sectionsPath).toString('utf-8');
+          recurseSections(sections);
+          output += '<li>';
+          output += '<ul class="dropdown-menu" role="menubar">';
+          output += '\n<a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a>';
+          var sections = yaml.safeLoad(file);
+          output += '</ul>';
+          output += '</li>';
+        }
+      }
+    }
     return output;
   }
 };

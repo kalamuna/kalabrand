@@ -29,19 +29,21 @@ prototype:
 
 ## Main Navigation Sections
 sections:
-  # Content Strategy: content
+  Logo Usage: logo-usage
   Style Tile: style-tile
   Inspiration: inspiration
-  Illustration: illustration  
-  # Elements: elements
+  Type Styles: type-styles
+  Illustration: illustration
   Components: components
-  # Slideshow: slideshow
   Colors: colors
+# Content Strategy: content
+# Elements: elements
+# Slideshow: slideshow
 
 ## Style Tile Options
 styleTile:
   # Number of possible colors
-  colors: 36
+  colors: 64
   # Source links to inspirational images
   # Either relative paths from your images directory, or absolute paths to external images
   images:
@@ -78,17 +80,15 @@ styleTile:
 
   # Descriptive keywords for Style Tile
   keywords:
-    - Default
-    - Minimal
-    - Nothing
-    - Design me!
+    - Fun
+    - Playful
+    - Wonder
+    - Discovery
 
 #########################
 ## Component Guide
 #########################
 components:
-  bootstrap:
-    - Pulldown
   message:
     - status
     - warning

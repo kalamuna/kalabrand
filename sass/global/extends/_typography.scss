@@ -18,6 +18,58 @@
 // General type styles
 //
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+.leade {
+	font-size: 1.25rem;
+}
+
+.accent {
+	// display: inline-block;
+	position: relative;
+	left: -0.25em;
+	margin: 0;
+	padding: .125em .25em;
+	color: #fff;
+	background: $kala-magenta;
+	margin-bottom:.25em;
+}
+
+.lockup {
+	.accent {
+		margin-bottom: .0875em;
+	}
+	margin-bottom: .25em;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.accent-kala-orange {
+	@extend .accent;
+	background: $kala-orange !important;
+}
+
+.accent-kala-magenta {
+	@extend .accent;
+	background: $kala-magenta !important;	
+}
+
+.accent-kala-violet {
+	@extend .accent;
+	background: $kala-violet !important;	
+}
+
+.accent-kala-blue {
+	@extend .accent;
+	background: $kala-blue !important;	
+}
+
+.accent-kala-green {
+	@extend .accent;
+	background: $kala-green !important;	
+}
+
+.accent-kala-yellow {
+	@extend .accent;
+	background: $kala-yellow !important;	
 }

@@ -3,7 +3,9 @@
     <div id="client-id">
       {{#if options.grunt.userConfig.prototype.logo}}
         <div class="client-logo">
+          <a href="/">
           <img src="{{image-url options.grunt.userConfig.prototype.logo}}" alt="{{options.grunt.userConfig.client.name}} Logo">
+          </a>
         </div>
       {{else}}
         <h1 class="client-name">{{options.grunt.userConfig.client.name}}</h1>

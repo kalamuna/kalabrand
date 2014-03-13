@@ -83,4 +83,12 @@ h6 {
 // {heading-h6}@
 //////////////////////////////
 
+h1 {
+	@extend .kala-blue;
+}
+
+h2 {
+	@extend .kala-magenta;
+}
+
 }
