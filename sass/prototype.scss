@@ -12,80 +12,32 @@ $sp-max-page-width: 100%;
 $sp-single-to-multi-column: 637px;
 $sp-header-color: #f00;
 $sp-vertical-horizontal-nav: 721px;
-//////////////////////////////
 
 //////////////////////////////
 // Style Tile
 @import ".prototype/style-tile";
-.color-0 { background: nth($black-tints, 1); }
-.color-1 { background: nth($kala-magenta, 1); }
-.color-2 { background: nth($kala-orange, 1); }
-.color-3 { background: nth($kala-yellow, 1); }
-.color-4 { background: nth($kala-green, 1); }
-.color-5 { background: nth($kala-blue, 1); }
-.color-6 { background: nth($kala-violet, 1) };
-.color-7 { background: nth($kala-magentas, 1); }
-.color-8 { background: nth($kala-magentas, 2); }
-.color-9 { background: nth($kala-magentas, 3); }
-.color-10 { background: nth($kala-magentas, 4); }
-.color-11 { background: nth($kala-magentas, 5); }
-.color-12 { background: nth($kala-magentas, 6); }
-.color-13 { background: nth($kala-oranges, 1); }
-.color-14 { background: nth($kala-oranges, 2); }
-.color-15 { background: nth($kala-oranges, 3); }
-.color-16 { background: nth($kala-oranges, 4); }
-.color-17 { background: nth($kala-oranges, 5); }
-.color-18 { background: nth($kala-oranges, 6); }
-.color-19 { background: nth($kala-yellows, 1); }
-.color-20 { background: nth($kala-yellows, 2); }
-.color-21 { background: nth($kala-yellows, 3); }
-.color-22 { background: nth($kala-yellows, 4); }
-.color-23 { background: nth($kala-yellows, 5); }
-.color-24 { background: nth($kala-yellows, 6); }
-.color-25 { background: nth($kala-greens, 1); }
-.color-26 { background: nth($kala-greens, 2); }
-.color-27 { background: nth($kala-greens, 3); }
-.color-28 { background: nth($kala-greens, 4); }
-.color-29 { background: nth($kala-greens, 5); }
-.color-30 { background: nth($kala-greens, 6); }
-.color-31 { background: nth($kala-blues, 1); }
-.color-32 { background: nth($kala-blues, 2); }
-.color-33 { background: nth($kala-blues, 3); }
-.color-34 { background: nth($kala-blues, 4); }
-.color-35 { background: nth($kala-blues, 5); }
-.color-36 { background: nth($kala-blues, 6); }
-.color-37 { background: nth($kala-violets, 1); }
-.color-38 { background: nth($kala-violets, 2); }
-.color-39 { background: nth($kala-violets, 3); }
-.color-40 { background: nth($kala-violets, 4); }
-.color-41 { background: nth($kala-violets, 5); }
-.color-42 { background: nth($kala-violets, 6); }
+
 
 //////////////////////////////
-
 .images li {
   border-radius: 0 !important;
 }
-
 
 //////////////////////////////
 // Color Guide
 @import ".prototype/color-guide";
 // This mixin will generate the styling for the color guide. If you would like to write your own, remove it and please do so.
 // @include generate-colour-guide($black-tints, $primary-tints, $primary-shades, $secondary-tints, $secondary-shades, $tertiary-tints, $tertiary-shades, $quaternary-tints, $quaternary-shades);
-@include generate-colour-guide(
 
+@include generate-colour-guide (
 	$black-tints,
-	
 	$kala-colors,
-
 	$kala-oranges,
 	$kala-magentas,
 	$kala-violets,
 	$kala-blues,
 	$kala-greens,
 	$kala-yellows,
-
 	$kala-orange-tints,
 	$kala-orange-shades,
 	$kala-magenta-tints,
@@ -98,7 +50,6 @@ $sp-vertical-horizontal-nav: 721px;
 	$kala-green-shades,
 	$kala-yellow-tints,
 	$kala-yellow-shades
-
 );
 
 #page-id {

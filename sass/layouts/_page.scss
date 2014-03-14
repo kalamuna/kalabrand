@@ -1,0 +1,112 @@
+
+%centered-content {
+	@include make-xs-column(12);
+	margin: 0 auto;
+	@include breakpoint( nth($breakpoints,1) ) {
+		max-width: nth($breakpoints,1);
+	}
+	@include breakpoint( nth($breakpoints,2) ) {
+		max-width: nth($breakpoints,2);
+	}
+	@include breakpoint( nth($breakpoints,3) ) {
+		max-width: nth($breakpoints,3);
+	}
+	@include breakpoint( nth($breakpoints,4) ) {
+		max-width: nth($breakpoints,4);
+	}
+}
+
+%fullwidth {
+	width: 100%;
+	&>.content {
+		@extend %centered-content;
+	}
+}
+
+@mixin header-accent($color){
+	background-color: $color;
+	color: white;
+	@extend %header-accent;
+}
+
+h3.accent {
+	@include header-accent($kala-magenta);
+}
+
+#header {
+	padding: 1em;
+}
+
+%mountain-bg {
+	@include clearfix;
+	background-image: url(/images/backgrounds/mountains.png);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+}
+
+%image-strip {
+	height: 26em;
+}
+
+#demo-banner {
+	@extend %fullwidth;
+	@extend %mountain-bg;
+	@extend %kala-blue-bg;
+	@extend %image-strip;
+	.content {
+		@include make-md-column(6); 
+		@include clearfix;
+	}
+	color: nth( $kala-blue-tints, 4 );
+	h2, h3, h4 {
+		color: nth( $kala-blue-tints, 3 );		
+	}
+	p {
+		margin-top: 1.5em;
+		font-size: 1.125em;
+	}
+	margin-bottom: 2em;
+}
+
+#prototype-section--main {
+	padding: 0 2em 2em 2em;
+}
+
+.colors li {
+	width: 2em !important;
+	height: 2em !important;
+}
+
+article>section {
+	@include make-xs-column(12);
+	@include make-md-column(9);
+	padding-left: 1em;
+}
+
+figure.example {
+	@include make-xs-column(12);
+	@include make-sm-column( 6 );
+	figcaption {
+		margin-top: 1em;
+		background: nth( $black-tints, 6 );
+		padding: 1em;
+		border-radius: .5em;
+	}
+	margin-bottom: 3em;
+}
+
+#prototype-section--main {
+	padding: 7.125em 0 4em 0;
+	@include clearfix;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index:99;
+	padding: .5em 2em 0 2em;
+	font-size: .75rem;
+	background: rgba( nth($black-tints, 6), .9 );
+}

@@ -22,22 +22,6 @@
 // Style Tile
 //////////////////////////////
 
-.text-examples {
-  width: 100%;
-  @include clearfix(true);
-  @include breakpoint($sp-single-to-multi-column) {
-    @include golden('left');
-  }
-}
-
-.graphic-examples {
-  width: 100%;
-  @include clearfix(true);
-  @include breakpoint($sp-single-to-multi-column) {
-    @include golden('right');
-  }
-}
-
 .colors, .images {
   ul {
     text-align: center;

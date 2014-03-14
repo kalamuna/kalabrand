@@ -9,13 +9,13 @@
 }
 
 %tooltip-element {
+	@include tooltip-element();
 	padding: .5em;
-	// width: 140%;
-	width: auto;
-//	max-width: $tooltip-max-width;
-	// left: -20%;
+	width: $tooltip-max-width;
 	border-radius: .25rem;
+	left:-15%;
 	font-size: 1rem;
+	z-index: 150;
 	&::after {
 		content: "";
   	position: absolute;
@@ -31,7 +31,6 @@
 	cursor: pointer;
 	.tooltip-element {
 		@extend %tooltip-element;
-		@include tooltip-element();
 		@include transition-property( opacity, bottom );
 	  @include transition-duration(.28s);
 	  @include transition-timing-function(ease-in-out);

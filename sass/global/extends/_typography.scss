@@ -20,17 +20,21 @@
 
 .leade {
 	font-size: 1.25rem;
+	margin-bottom:1em;
 }
 
 .accent {
-	// display: inline-block;
-	position: relative;
-	left: -0.25em;
 	margin: 0;
 	padding: .125em .25em;
 	color: #fff;
 	background: $kala-magenta;
 	margin-bottom:.25em;
+}
+
+.content-wrapper>.accent:first-child {
+	padding-top: .5em;
+	padding-left: .5em;
+	margin-bottom: 1em;
 }
 
 .lockup {

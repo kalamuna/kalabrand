@@ -2,6 +2,7 @@ var fs = require('fs');
 var _s = require ('underscore.string');
 var yaml = require('js-yaml');
 var marked = require('marked');
+
 marked.setOptions({
   gfm: true,
   langPrefix: 'language-',
@@ -307,54 +308,16 @@ module.exports = {
   },
   'bootstrap-navigation': function(menu) {
     var basePath = this.options.assets;
-    if (basePath === '/') {
-      basePath = '';
-    }
+    if (basePath === '/') basePath = '';
     var path = basePath + this.options.userConfig.generator.pagesDir + '/';
 
-    var output = '<ul class="nav push-right">';
-
-    function recurseSections(obj) {
-      for (var k in obj) {
-        if (typeof(obj[k]) === 'object') {
-          output += '<li class="dropdown">'
-          output += '<b role="menuitem" data-menu-toggle="closed">' + k + '</b>';
-          output += '\n<ul class="dropdown-menu>';
-          recurseSections(obj[k]);
-        }
-        else {
-          if (k !== 'undefined') {
-            output += '\n<li><a href="' + basePath + '/' + obj[k] + '" role="menuitem">' + k + '</a></li>';
-          }
-        }
-      }
-      output += '\n</li>';
-    }
+    var output = '<ul class="nav navbar-nav">';
 
     for (var k in menu) {
       if (typeof(k) === 'string' && typeof(menu[k] === 'string')) {
         var sectionsPath = path + menu[k];
-        if (menu[k] !== '') {
-          sectionsPath += '/';
-        }
-        sectionsPath += 'sections.yml';
-
-        var file = fs.existsSync(sectionsPath);
-
-        if (!file) {
-          output += '\n<a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a>';
-        }
-        else {
-
-          file = fs.readFileSync(sectionsPath).toString('utf-8');
-          recurseSections(sections);
-          output += '<li>';
-          output += '<ul class="dropdown-menu" role="menubar">';
-          output += '\n<a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a>';
-          var sections = yaml.safeLoad(file);
-          output += '</ul>';
-          output += '</li>';
-        }
+        if (menu[k] !== '') sectionsPath += '/';
+        output += '\n<li><a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a></li>';
       }
     }
     return output;

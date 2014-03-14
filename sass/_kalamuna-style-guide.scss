@@ -1,7 +1,9 @@
 //////////////////////////////
 // Style Guide
 //
-// This is your style guide. There are many like it, but this one is yours. All of the styling that you would like to be exported into your final Style Guide should either be written in here or imported into here from global or partials
+// This is your style guide. 
+// There are many like it, but this one is yours. 
+// All of the styling that you would like to be exported into your final Style Guide should either be written in here or imported into here from global or partials
 //////////////////////////////
 
 ////////////////////////////
@@ -22,17 +24,15 @@ $experimental-support-for-microsoft    : false !default;
 
 ////////////////////////
 // CSS Reset
-@import "normalize";
+// @import "normalize";
 ////////////////////////
 
 ////////////////////////
 // Compass Extensions
 @import "toolkit";
 @import "breakpoint";
-@import "singularitygs";
 @import "modular-scale";
 @import "color-schemer";
-@import "bootstrap";
 ////////////////////////
 
 //////////////////////////////
@@ -42,6 +42,11 @@ $experimental-support-for-microsoft    : false !default;
 @import "global/mixins/all";
 @import "global/extends/all";
 //////////////////////////////
+
+/////////////////////////////////
+// Bootstrap after the variables
+@import "bootstrap";
+/////////////////////////////////
 
 //////////////////////////////
 // ELEMENTS
@@ -56,7 +61,6 @@ $experimental-support-for-microsoft    : false !default;
 // COMPONENTS
 @import "components/a11y";
 @import "components/message";
-@import "components/button";
 @import "components/pager";
 //////////////////////////////
 
