@@ -296,7 +296,7 @@ module.exports = {
   ////////////////////////////////////////
   // Bootstrap helpers
   //
-  'bootstrap-thumbnail': function( obj ) {
+  'bootstrap-thumbnail': function(obj) {
 
     var output = "<div class='thumbnail'>";
 
