@@ -26,3 +26,7 @@ $base-size: 1em;
 //////////////////////////////
 $breakpoint-to-ems: true;
 $breakpoints: (480, 768, 1000, 1200);
+$screen-xs : nth( $breakpoints, 1 );
+$screen-sm : nth( $breakpoints, 2 );
+$screen-md : nth( $breakpoints, 3 );
+$screen-lg : nth( $breakpoints, 4 );
