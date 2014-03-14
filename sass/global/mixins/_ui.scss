@@ -8,19 +8,23 @@
   }
 }
 
+
+
 %tooltip-element {
 	@include tooltip-element();
+	position: absolute;
 	padding: .5em;
-	width: $tooltip-max-width;
 	border-radius: .25rem;
-	left:-15%;
+	@include center-horizontally();
 	font-size: 1rem;
 	z-index: 150;
+	white-space: nowrap;
 	&::after {
 		content: "";
   	position: absolute;
   	top: 100%;
-  	left: 50%;
+		@include center-horizontally();
+  	margin-left: .5em;
 	  border-width: .75em .5em 0 .5em;
 	  border-style: solid;
 	}
@@ -35,7 +39,6 @@
 	  @include transition-duration(.28s);
 	  @include transition-timing-function(ease-in-out);
 		visibility: hidden;
-		position: absolute;
 		bottom: 90%;
 		opacity: 0;
 		text-align: left;
