@@ -47,23 +47,24 @@ styleTile:
   # Source links to inspirational images
   # Either relative paths from your images directory, or absolute paths to external images
   images:
+    - reference/posters.jpg
     - reference/06_deharak1.jpg
     - reference/06_deharak2.jpg
     - reference/6a00e5532538c4883301901e6fbef9970b-320wi.png
     - reference/15_vinyl2.jpg
     - reference/2984251225_4d119cfcc8.jpg
-    - reference/3528414408_831904e5aa_o.jpg
     - reference/3861261994_0855c46a28_b.jpg
     - reference/5683588305_e1ebf34cf1_b.jpg
+    - reference/expo70.jpg
     - reference/amplituhedron.jpg
     - reference/blanka_flickr.jpg
-    - reference/blanka.jpg
     - reference/c6af71c56d10b7b78122ea79d7613f75.jpg
     - reference/cover_gebrauchsgraphic_april1956.jpg
     - reference/deHarak1.jpg
-    - reference/expo70.jpg
     - reference/img01.jpg
     - reference/munich3.jpg
+    - reference/steinweis_sorrell_6744.jpg
+    - reference/t_44fc6540-7502-11e1-a929-9f7e4a600001.jpg
     - reference/novum5.jpg
     - reference/ny1972.jpg
     - reference/olivetti4.png
@@ -72,11 +73,8 @@ styleTile:
     - reference/otl-aicher-exhibition-1.jpg
     - reference/photos-2011-09-26-1994.jpg
     - reference/picture-15.png
-    - reference/posters.jpg
     - reference/project-thirty-three-album-covers.jpg
     - reference/Rudolph-de-harak-p33_fou_tsong2.jpg
-    - reference/steinweis_sorrell_6744.jpg
-    - reference/t_44fc6540-7502-11e1-a929-9f7e4a600001.jpg
 
   # Descriptive keywords for Style Tile
   keywords:
