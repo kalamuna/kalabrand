@@ -1,6 +1,6 @@
 (function (kala, $, undefined) {
 	
-	kala.masonrySelectors = [
+	var masonrySelectors = [
 		["#inspiration-thumbs", ".thumbnails"]
 	];
 
@@ -31,13 +31,19 @@
 		});
 	};
 
-	var watchScroll = function () {
-		$("body").scrollspy({ target: "#header" });
-	};
-
+	var spyScroll = function () {
+	  // $("body").scrollspy({ target: $(".accent:first-child") });
+	  // $("body").on("activate.bs.scrollspy", function () {
+			// console.log("A");
+	  // });
+	  // $("body").on("activate.bs.scrollspy", function () {
+			// console.log("B");
+	  // });
+  };
+ 
 	var initMasonry = function () {
-		console.log(kala.masonrySelectors);
-		$(kala.masonrySelectors).each(function () {
+		console.log(masonrySelectors);
+		$(masonrySelectors).each(function () {
 			var el = $(this[0]);
 			var selector = this[1];
 			el.masonry({
@@ -48,7 +54,7 @@
 
 	document.addEventListener("DOMContentLoaded", function () {
 		makeColorsCopyToClipBoard();
-		watchScroll();
+		spyScroll();
 		initMasonry();
 	});
 
