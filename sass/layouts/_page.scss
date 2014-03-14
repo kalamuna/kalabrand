@@ -2,17 +2,17 @@
 %centered-content {
 	@include make-xs-column(12);
 	margin: 0 auto;
-	@include breakpoint( nth($breakpoints,1) ) {
-		max-width: nth($breakpoints,1);
+	@include breakpoint( $screen-xs ) {
+		max-width: $screen-xs;
 	}
-	@include breakpoint( nth($breakpoints,2) ) {
-		max-width: nth($breakpoints,2);
+	@include breakpoint( $screen-sm ) {
+		max-width: $screen-sm;
 	}
-	@include breakpoint( nth($breakpoints,3) ) {
-		max-width: nth($breakpoints,3);
+	@include breakpoint( $screen-md ) {
+		max-width: $screen-md;
 	}
-	@include breakpoint( nth($breakpoints,4) ) {
-		max-width: nth($breakpoints,4);
+	@include breakpoint( $screen-lg ) {
+		max-width: $screen-lg;
 	}
 }
 
@@ -23,23 +23,13 @@
 	}
 }
 
-@mixin header-accent($color){
-	background-color: $color;
-	color: white;
-	@extend %header-accent;
-}
-
-h3.accent {
-	@include header-accent($kala-magenta);
-}
-
 #header {
 	padding: 1em;
 }
 
 %mountain-bg {
 	@include clearfix;
-	background-image: url(/images/backgrounds/mountains.png);
+	background-image: url(../images/backgrounds/mountains.png);
 	background-repeat: repeat-x;
 	background-position: bottom center;
 }
@@ -56,6 +46,7 @@ h3.accent {
 	.content {
 		@include make-md-column(6); 
 		@include clearfix;
+		padding-left: 0;
 	}
 	color: nth( $kala-blue-tints, 4 );
 	h2, h3, h4 {
@@ -80,7 +71,11 @@ h3.accent {
 article>section {
 	@include make-xs-column(12);
 	@include make-md-column(9);
-	padding-left: 1em;
+	padding-left: 2.75rem;
+	padding-right: 2rem;
+	@include breakpoint( $screen-lg ) {
+		padding-left: 7.75rem;
+	}
 }
 
 figure.example {
@@ -98,6 +93,16 @@ figure.example {
 #prototype-section--main {
 	padding: 7.125em 0 4em 0;
 	@include clearfix;
+}
+
+#inspiration-thumbs {
+	.thumbnail {
+		border:0;
+		padding: 0;
+		box-shadow: 1px 1px 5px rgba( black, .3 );
+		float: left;
+		margin: 0 .5em .5em 0;
+	}
 }
 
 #footer {
