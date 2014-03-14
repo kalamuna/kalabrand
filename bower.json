@@ -2,13 +2,29 @@
   "name": "kalamuna-styleguide",
   "version": "0.1.0",
   "dependencies": {
+    "Element.details": "termi/Element.details",
     "formalize": "git://github.com/nathansmith/formalize",
-    "modernizr": "~2.6.2",
-    "jquery": "~2.0.0",
-    "prism": "gh-pages",
-    "Element.details": "termi/Element.details"
+    "jquery": "~2.1.0",
+    "modernizr": "~2.7.2",
+    "prism": "gh-pages"
   },
   "devDependencies": {
     "responsive-indicator": "~0.1.3"
-  }
+  },
+  "homepage": "https://github.com/kalamuna/kalabrand",
+  "authors": [
+    "Thiago de Mello Bueno <thiago@kalamuna.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "moduleType": [
+    "node"
+  ]
 }
