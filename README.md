@@ -29,4 +29,4 @@ npm install
 bower install
 grunt server
 ```
-Point your browser to http://localhost:8000 et voila
+Point your browser to [http://localhost:8000](http://localhost:8000) et voila
