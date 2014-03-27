@@ -320,6 +320,7 @@ module.exports = {
         output += '\n<li><a href="' + basePath + '/' + menu[k] + '" role="menuitem">' + k + '</a></li>';
       }
     }
+    output += "</ul>";
     return output;
   }
 };

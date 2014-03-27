@@ -40,6 +40,21 @@ sections:
 # Elements: elements
 # Slideshow: slideshow
 
+bootstrap:
+  js:
+    - transition.js
+    - alert.js
+    - button.js
+    - carousel.js
+    - collapse.js
+    - dropdown.js
+    - modal.js
+    - tooltip.js
+    - popover.js
+    - tab.js
+    # - scrollspy.js
+    # - affix.js
+
 ## Style Tile Options
 styleTile:
   # Number of possible colors
@@ -87,30 +102,15 @@ styleTile:
 ## Component Guide
 #########################
 components:
-  message:
-    - status
-    - warning
-    - error
-  button:
-    - Call to Action:
-        classes:
-          - call-to-action
-    - Big Button:
-        classes:
-          - big-button
-    - Warning Button:
-        classes:
-          - big-button
-          - warning
 
 #########################
 ## Color Guide
 #########################
 colors:
   # Variable names of the color variables being used
-
-  variables:
+  blacks: 
     - black-tints
+  kala:
     - kala-colors
     - kala-oranges
     - kala-magentas
@@ -118,6 +118,7 @@ colors:
     - kala-blues
     - kala-greens
     - kala-yellows
+  tints-shades:
     - kala-orange-tints
     - kala-orange-shades
     - kala-magenta-tints
@@ -132,13 +133,13 @@ colors:
     - kala-yellow-shades
 
   # The number of shades each color has
-  shades: 7
+  shades: 12
 
 #########################
 ## Server Options
 #########################
 server:
-  port: 8000
+  port: 8020
   # If remoteAccess is set to true, you will be able to access your prototype from any device connected to the same network as well as be able to remotely debug them.
   remoteAccess: false
 
@@ -158,8 +159,8 @@ compass:
   # Your dependencies should all go here. Style Prototypes will automatically generate your Bundler Gemfile and Gemfile.lock for you. If you run into dependency issues with Bundler, update your gem versions here.
   dependencies:
     sass: ">=3.2.0"
-    compass: '>=0.12.1'
-    bootstrap-sass: "3.1.1.0"
+    compass: '>=0.12.3'
+    # bootstrap-sass: ">=3.1.1.0"
     style-prototypes: "~>1.3.0"
 
 #########################
