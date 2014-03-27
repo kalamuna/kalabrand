@@ -12,7 +12,7 @@ stylesheets_dir = File.join(base_directory, 'stylesheets')
 templates_dir   = File.join(base_directory, 'templates')
 Compass::Frameworks.register('<%= _.slugify(grunt.userConfig.client.name) %>-style-guide', :stylesheets_directory => stylesheets_dir, :templates_directory => templates_dir)
 
-add_import_path "bootstrap-sass/lib"
+
 
 # Version and date of version for your Compass extension.
 # Replace Styleguide with the name of your style guide
@@ -30,5 +30,8 @@ end
 #  any partials. Uncomment below.
 
 # module Sass::Script::Functions
+
+# Sass::Script::Number.precision = 8
+::Sass::Script::Number.precision = [10, ::Sass::Script::Number.precision].max
 #
 # end
