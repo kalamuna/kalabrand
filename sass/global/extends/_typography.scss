@@ -31,8 +31,7 @@
 	margin-bottom:.25em;
 }
 
-.content-wrapper>article>.accent:first-child,
-.content-wrapper>.accent:first-child {
+article .accent:first-child {
 	padding-top: .5em;
 	padding-left: 2.3125em !important;
 	margin-bottom: 1em;
@@ -77,4 +76,11 @@
 .accent-kala-yellow {
 	@extend .accent;
 	background: $kala-yellow !important;	
+}
+
+.label {
+	color: nth( $black-tints, 5 );
+	display: block;
+	font-weight: light;
+	text-align: left;
 }

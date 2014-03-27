@@ -1,7 +1,4 @@
-
-%centered-content {
-	@include make-xs-column(12);
-	margin: 0 auto;
+@mixin centered-content {
 	@include breakpoint( $screen-xs ) {
 		max-width: $screen-xs;
 	}
@@ -14,13 +11,25 @@
 	@include breakpoint( $screen-lg ) {
 		max-width: $screen-lg;
 	}
+	@include clearfix;
+	margin: 0 auto;
 }
 
 %fullwidth {
 	width: 100%;
 	&>.content {
-		@extend %centered-content;
+		@include centered-content;
 	}
+}
+
+%fullpage {
+	@extend %fullwidth;
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	@extend %fullpage;
 }
 
 #header {
@@ -38,13 +47,30 @@
 	height: 26em;
 }
 
+// should safely be article[data-layout="twocol-sidebar-second"]
+.twocol-sidebar-second{
+	@extend .row;
+	&>.content {
+		@include make-md-column( 9 );
+	}
+	&>.sidebar {
+		@include make-md-column( 3, 9 );
+	}
+}
+
+.logo-downloads {
+	@extend .well;
+	@include centered-content;
+	margin-bottom: 3rem;
+}
+
 #demo-banner {
 	@extend %fullwidth;
 	@extend %mountain-bg;
 	@extend %kala-blue-bg;
 	@extend %image-strip;
 	.content {
-		@include make-md-column(6); 
+		@include make-md-column(6);
 		@include clearfix;
 		padding-left: 0;
 	}
@@ -68,9 +94,7 @@
 	height: 2em !important;
 }
 
-article>section {
-	@include make-xs-column(12);
-	@include make-md-column(9);
+article.article>section {
 	padding-left: 2.75rem;
 	padding-right: 2rem;
 	@include breakpoint( $screen-lg ) {
@@ -79,9 +103,20 @@ article>section {
 }
 
 figure.example {
-	@include make-xs-column(12);
-	@include make-sm-column( 6 );
+	@include centered-content;
+	// @include make-xs-column(12);
+	// @include make-md-column(6);
+	&.responsive {
+		img {
+			max-width: 400px;
+			width: 100%;
+			height: auto;
+			display: inline-block;
+			margin: 0 auto;
+		}		
+	}
 	figcaption {
+		max-width:75%;
 		margin-top: 1em;
 		background: nth( $black-tints, 6 );
 		padding: 1em;
@@ -114,4 +149,10 @@ figure.example {
 	padding: .5em 2em 0 2em;
 	font-size: .75rem;
 	background: rgba( nth($black-tints, 6), .9 );
+}
+
+.page {
+	.content {
+		border: 1px #0af solid !important;		
+	}
 }

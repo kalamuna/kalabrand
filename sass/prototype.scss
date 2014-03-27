@@ -17,7 +17,6 @@ $sp-vertical-horizontal-nav: 721px;
 // Style Tile
 @import ".prototype/style-tile";
 
-
 //////////////////////////////
 .images li {
   border-radius: 0 !important;
@@ -28,32 +27,41 @@ $sp-vertical-horizontal-nav: 721px;
 @import ".prototype/color-guide";
 // This mixin will generate the styling for the color guide. If you would like to write your own, remove it and please do so.
 // @include generate-colour-guide($black-tints, $primary-tints, $primary-shades, $secondary-tints, $secondary-shades, $tertiary-tints, $tertiary-shades, $quaternary-tints, $quaternary-shades);
+.colors-blacks {
+	@include generate-colour-guide (
+		$black-tints
+	)
+}
 
-@include generate-colour-guide (
-	$black-tints,
-	$kala-colors,
-	$kala-oranges,
-	$kala-magentas,
-	$kala-violets,
-	$kala-blues,
-	$kala-greens,
-	$kala-yellows,
-	$kala-orange-tints,
-	$kala-orange-shades,
-	$kala-magenta-tints,
-	$kala-magenta-shades,
-	$kala-violet-tints,
-	$kala-violet-shades,
-	$kala-blue-tints,
-	$kala-blue-shades,
-	$kala-green-tints,
-	$kala-green-shades,
-	$kala-yellow-tints,
-	$kala-yellow-shades
-);
+.colors-kala {
+	@include generate-colour-guide (
+		$kala-colors,
+		$kala-oranges,
+		$kala-magentas,
+		$kala-violets,
+		$kala-blues,
+		$kala-greens,
+		$kala-yellows
+	);
+}
+
+.colors-tints-shades {
+	@include generate-colour-guide (
+		$kala-orange-tints,
+		$kala-orange-shades,
+		$kala-magenta-tints,
+		$kala-magenta-shades,
+		$kala-violet-tints,
+		$kala-violet-shades,
+		$kala-blue-tints,
+		$kala-blue-shades,
+		$kala-green-tints,
+		$kala-green-shades,
+		$kala-yellow-tints,
+		$kala-yellow-shades
+	);
+}
 
 #page-id {
 	display: none;
 }
-
-

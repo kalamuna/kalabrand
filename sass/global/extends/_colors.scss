@@ -46,3 +46,38 @@
 %kala-yellow-bg {
 	background-color: $kala-yellow;
 }
+
+////////////////////////////
+// page backgrounds
+//
+
+.page.orange {
+	@extend %kala-orange-bg;
+	color: nth( $kala-orange-tints, 4 );
+}
+
+.page.magenta {
+	@extend %kala-magenta-bg;
+	color: nth( $kala-magenta-tints, 4 );
+}
+
+.page.violet {
+	@extend %kala-violet-bg;
+	color: nth( $kala-violet-tints, 4 );
+}
+
+.page.blue {
+	@extend %kala-blue-bg;
+	color: nth( $kala-blue-tints, 4 );
+}
+
+.page.green {
+	@extend %kala-green-bg;
+	color: nth( $kala-green-tints, 4 );
+}
+
+.page.yellow {
+	@extend %kala-yellow-bg;
+	color: nth( $kala-yellow-tints, 4 );
+}
+

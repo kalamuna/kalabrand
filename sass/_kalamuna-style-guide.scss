@@ -23,11 +23,6 @@ $experimental-support-for-microsoft    : false !default;
 ////////////////////////////
 
 ////////////////////////
-// CSS Reset
-// @import "normalize";
-////////////////////////
-
-////////////////////////
 // Compass Extensions
 @import "toolkit";
 @import "breakpoint";
@@ -36,17 +31,74 @@ $experimental-support-for-microsoft    : false !default;
 ////////////////////////
 
 //////////////////////////////
-// GLOBALS
+// Variables
 @import "global/variables/all";
+
+//////////////////////////////
+// Bootstrap
+
+// Path is relative to bower_component, 
+// using add_import_path in .compass/.template/style-guide.rb didn't seem to work...
+// So going 'long-hand' for now
+
+// Core variables and mixins
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
+
+// Reset
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/normalize";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/print";
+
+// Core CSS
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/component-animations";
+//@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/glyphicons";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/dropdowns";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/button-groups";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/navs";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/navbar";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/breadcrumbs";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/pagination";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/pager";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/labels";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/badges";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/jumbotron";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/thumbnails";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/alerts";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/progress-bars";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/media";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/list-group";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/panels";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/wells";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/modals";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/tooltip";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/popovers";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/responsive-utilities";
+
+//////////////////////////////
+// Globals
+
 @import "global/functions/all";
 @import "global/mixins/all";
 @import "global/extends/all";
 //////////////////////////////
 
-/////////////////////////////////
-// Bootstrap after the variables
-@import "bootstrap";
-/////////////////////////////////
 
 //////////////////////////////
 // ELEMENTS
@@ -59,12 +111,17 @@ $experimental-support-for-microsoft    : false !default;
 
 //////////////////////////////
 // COMPONENTS
-@import "components/a11y";
-@import "components/message";
-@import "components/pager";
+// @import "components/a11y";
+// @import "components/message";
+// @import "components/pager";
 //////////////////////////////
 
 //////////////////////////////
 // LAYOUTS
 @import "layouts/layout";
+//////////////////////////////
+
+//////////////////////////////
+// DESIGN (Specifics)
+@import "design/design";
 //////////////////////////////
