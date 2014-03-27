@@ -2,11 +2,15 @@
   "title": "Inspiration"
 }
 ---
-<h2 class="accent">Inspiration</h2>
-<div id="inspiration-thumbs">
-  {{#each options.grunt.userConfig.styleTile.images}}
-    {{#bootstrap-thumbnail}}
-		<img src="/{{{../../options.grunt.userConfig.assets.imagesDir}}}/{{{this}}}">
-    {{/bootstrap-thumbnail}}
-  {{/each}}
-</div>
+<article>
+
+	<h2 class="accent">Inspiration</h2>
+	<div id="inspiration-thumbs">
+	  {{#each options.grunt.userConfig.styleTile.images}}
+	    {{#bootstrap-thumbnail}}
+			<img src="/{{{../../options.grunt.userConfig.assets.imagesDir}}}/{{{this}}}">
+	    {{/bootstrap-thumbnail}}
+	  {{/each}}
+	</div>
+
+</article>

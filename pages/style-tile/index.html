@@ -3,17 +3,20 @@
 }
 ---
 
-<article class="style-tiles">
+<article class="style-tiles article">
 
-  <h2 class="accent accent-kala-orange">Style Tile</h2>
+  <h2 class="accent accent-kala-magenta">Style Tile</h2>
+  
 
-  <section class="article-leade">
+
+  <section class="twocol-sidebar-second">
+
+    <section class="content">
 
 {{#markdown}}
 ## Vision Statement
 {{/markdown}}
 
-    <div class="content">
       <p class='leade kala-orange'>
       Kalamuna is a bunch of activists, artists, mathematicians, punsters and history buffs who were more likely to major in the humanities than in computer stuff. We’re voracious learners who take things apart, play with them, and see what we can make. And these are the reasons we’re great at making the Internet.
       </p>
@@ -27,13 +30,31 @@
       Which is what our clients do. They embrace curiosity, play and provocation to solve our most important problems. They’re nonprofit execs using the web to instigate. They’re government workers using mobile for a cleaner environment. They’re entrepreneurs offering sustainable products online. These people also like to tinker, to critique, and change the way things are. We believe this restless, rabble-rousing mindset is what gets anything worth doing done.
       </p>
       <h4 class="logo-gem">Kalamuna</h4>
-      <h8>Let’s Play.</h8>
-    </div>
+      <h6 class="gem-lockup">Let’s Play.</h6>
 
-{{#markdown}}
-  [This is an example of link text](#)
-{{/markdown}}
-  
+    </section>
+
+    <aside class="sidebar">
+      <a href="" class="btn btn-default">A button</a>
+      <a href="" class="btn btn-default btn-lg">A button</a>
+      <a href="" class="btn btn-danger">A button</a>
+
+      <div class="keywords group">
+        {{#each options.grunt.userConfig.styleTile.keywords}}
+        <span class="keyword-{{@index}}">{{this}}</span>
+        {{/each}}
+      </div>
+      <ul>
+        <li>1 Item</li>
+        <li>2 Item</li>
+        <li>3 Item</li>
+        <li>4 Item</li>
+        <li>5 Item</li>
+        <li>6 Item</li>
+        <li>7 Item</li>
+        <li>8 Item</li>
+      </ul>
+    </aside>
   </section>
 
   <section id="demo-banner">
@@ -45,32 +66,29 @@
     </div>
 
   </section>
+
+  <section class="twocol-sidebar-second">
     
-  <section clas="ongoing">
+    <div class="content">
 
 {{#markdown}}
+  [This is an example of link text](#)
+{{/markdown}}
+    
+{{#markdown}}
 
-<p class="lead">Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.</p>
+  <p class="lead">Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.</p>
 
-Maecenas faucibus mollis interdum. Vivamus sagittis [donec odio](#) lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  Maecenas faucibus mollis interdum. Vivamus sagittis [donec odio](#) lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
->Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
+  >Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
 
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna.
+  Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
 {{/markdown}}
-
-    <a href="" class="btn btn-default">A button</a>
-    <a href="" class="btn btn-default btn-lg">A button</a>
-    <a href="" class="btn btn-danger">A button</a>
-
-    <div class="keywords group">
-      {{#each options.grunt.userConfig.styleTile.keywords}}
-      <span class="keyword-{{@index}}">{{this}}</span>
-      {{/each}}
+    
     </div>
 
   </section>
-
 
 </article>

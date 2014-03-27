@@ -3,16 +3,62 @@
 }
 ---
 
-<article class="color-guide">
-  <ul>
-    {{#each options.grunt.userConfig.colors.variables}}
-      {{#for 1 7 1}}
-    <li class="tooltip-container">
-    	<div class="tooltip-element">
-				nth(${{../this}}, {{this}})
-    	</div>
-    </li>
-      {{/for}}
-    {{/each}}
-  </ul>
+<article>
+
+  <section class="colors-blacks">
+    <h3>Blacks</h3>
+    <p class="detail">
+      A limited selection of greys, meant to provide both flexibility and concistency with navigation, rules, and other ui elements.
+    </p>
+    <ul class="color-guide">
+      {{#each options.grunt.userConfig.colors.blacks}}
+        {{#for 1 7 1}}
+      <li class="tooltip-container">
+      	<div class="tooltip-element">
+  				nth(${{../this}}, {{this}})
+      	</div>
+      </li>
+        {{/for}}
+      {{/each}}
+    </ul>
+  </section>
+  <section class="colors-kala">
+    <h3>Kala Colors</h3>
+    <p class="detail">
+      The primary colors of the Kala-rainbow.
+      Meaning and usage will can and should develop over time.
+      The blue and magenta are taking the stage as the 'primary' colors.
+    </p>
+    <ul class="color-guide">
+      {{#each options.grunt.userConfig.colors.kala}}
+        {{#for 1 7 1}}
+      <li class="tooltip-container">
+        <div class="tooltip-element">
+          nth(${{../this}}, {{this}})
+        </div>
+      </li>
+        {{/for}}
+      {{/each}}
+    </ul>
+  </section>
+
+  <section class="colors-tints-shades">
+    <h3>Tints and Shades</h3>
+    <p class="detail">
+      Tints and shades, are more often used in monochrome arrangements.
+      Specifically to provide contrast, within a specific palette.
+    </p>
+    <ul class="color-guide">
+      {{#each options.grunt.userConfig.colors.tints-shades}}
+        {{#for 1 7 1}}
+      <li class="tooltip-container">
+        <div class="tooltip-element">
+          nth(${{../this}}, {{this}})
+        </div>
+      </li>
+        {{/for}}
+      {{/each}}
+    </ul>
+  </section>
+
 </article>
