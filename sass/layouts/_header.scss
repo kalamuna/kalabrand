@@ -3,7 +3,6 @@
 	@include clearfix;
 	background: #f9f9f9;
 	box-shadow: 0px 1px 5px rgba( #000, .3 );
-	padding: .5em 2em;
 	.navbar-nav {
 		@include breakpoint( $screen-md ) {
 			padding-top: 2.35em;			
@@ -37,7 +36,7 @@
 	height: 97px;
 	background: url( $logo-url ) left center no-repeat;
 	font-size: 1rem;
-	margin: .5em 0;	
+	margin: 0;	
 	text-indent: -100em;
 	a {
 		// @todo make this into a placeholder extend
