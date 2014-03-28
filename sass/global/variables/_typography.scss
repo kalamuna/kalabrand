@@ -2,8 +2,6 @@
 // Typography
 //////////////////////////////
 
-
-
 @font-face {
   font-family: DinNextRounded;
   src:  url("../fonts/dinnextroundedltw01_bold-webfont.eot");
@@ -21,8 +19,19 @@
         url("../fonts/dinnextroundedltw01_medium-webfont.ttf") format("truetype"),
         url("../fonts/dinnextroundedltw01_medium-webfont.woff") format("woff"),
         url("../fonts/dinnextroundedltw01_medium-webfont.svg#din_next_rounded_lt_w01_medRg") format("svg");
-        font-weight: 400;
+        font-weight: 500;
 }
+
+@font-face {
+  font-family: DinNextRounded;
+  src:  url("../fonts/dinnextroundedltw01_light-webfont.eot");
+  src:  url("../fonts/dinnextroundedltw01_light-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/dinnextroundedltw01_light-webfont.ttf") format("truetype"),
+        url("../fonts/dinnextroundedltw01_light-webfont.woff") format("woff"),
+        url("../fonts/dinnextroundedltw01_light-webfont.svg#din_next_rounded_lt_w01_ligRg") format("svg");
+        font-weight: 300;
+}
+
 
 @font-face {
   font-family: SourceSansPro;

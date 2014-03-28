@@ -12,6 +12,7 @@ $heading-extendables-extended: false !default;
   %h1 {
     @extend %headings-extend;
     @include heading-size(nth($heading-sizes, 1));
+    font-weight: 300 !important;
   }
 
   %h2 {
