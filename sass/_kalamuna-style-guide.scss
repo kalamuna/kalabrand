@@ -32,17 +32,14 @@ $experimental-support-for-microsoft    : false !default;
 
 //////////////////////////////
 // Variables
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+// bootstrap overrides in global/variables/bootstrap.scss
 @import "global/variables/all";
 
 //////////////////////////////
 // Bootstrap
 
-// Path is relative to bower_component, 
-// using add_import_path in .compass/.template/style-guide.rb didn't seem to work...
-// So going 'long-hand' for now
-
-// Core variables and mixins
-@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+// Core mixins
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
 
 // Reset
