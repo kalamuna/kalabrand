@@ -32,10 +32,6 @@
 	@extend %fullpage;
 }
 
-#header {
-	padding: 1em;
-}
-
 %mountain-bg {
 	@include clearfix;
 	background-image: url(../images/backgrounds/mountains.png);

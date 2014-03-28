@@ -5,7 +5,8 @@
 	box-shadow: 0px 1px 5px rgba( #000, .3 );
 	.navbar-nav {
 		@include breakpoint( $screen-md ) {
-			padding-top: 2.35em;			
+			// line up with logotype A bar.
+			padding-top: 1.6875em;			
 		}
 		li {
 			display: inline-block;
