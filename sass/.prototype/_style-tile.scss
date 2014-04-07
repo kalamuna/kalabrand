@@ -1,6 +1,7 @@
 @import "toolkit-no-css";
 @import "breakpoint";
 
+// interesting two col golden ratio layout...
 @mixin golden($dir) {
   @if breakpoint-has-context() {
     @include box-sizing('border-box', false);
@@ -75,8 +76,8 @@
   }
 }
 
-.inspiration {
-  @include horizontal-list;
-  font-size: 3em;
-  text-align: center;
-}
+// .inspiration {
+//   @include horizontal-list;
+//   font-size: 3em;
+//   text-align: center;
+// }

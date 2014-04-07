@@ -78,22 +78,37 @@
 }
 
 //////////////////////
-// Default font stacks
+// Font stacks
 $font-sans: SourceSansPro, sans-serif;
 $font-display: DinNextRounded, Helvetica Rounded, Helvetica Neue, sans-serif;
 $font-serifs: serif;
 $font-mono: monospace;
-//////////////////////
 
 
 //////////////////////
-// General font variables
+// Base font variables
 $font-body: $font-sans;
 $font-headline: $font-display;
-//////////////////////
+
 
 //////////////////////
 // Font size and line-height
-$base-font-size: $base-size;
-$base-line-height: $base-font-size * 1.5;
+$font-size-base: 1rem;
+$font-size-large: $font-size-base * 1.25;
+$font-size-small: $font-size-base * 0.875;
+$line-height-base: $base-font-size * 1.5;
+
+
 //////////////////////
+// Headers
+$headings-font-family: $font-display;
+$headings-font-weight: inherit !default;
+// Sizes calculated based on 3:4 'perfect fourth' scale
+$font-size-h1: 4.209rem;  // ~67px
+$font-size-h2: 3.157rem;  // ~51px
+$font-size-h3: 2.369rem;  // ~38px
+$font-size-h4: 1.777rem;  // ~28px
+$font-size-h5: 1.333rem;  // ~21px
+$font-size-h6: 1rem;      // 16px
+
+

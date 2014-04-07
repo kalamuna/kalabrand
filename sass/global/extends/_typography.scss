@@ -1,3 +1,68 @@
+//////////////////////////////
+// Heading Element Extendable Classes
+//////////////////////////////
+
+%headings-extend {
+  family: $font-headline;
+  weight: normal;
+}
+
+%h1 {
+  @extend %headings-extend;
+  font-size: $font-size-h1;
+  font-weight: 300 !important;
+}
+
+%h2 {
+  @extend %headings-extend;
+  font-size: $font-size-h2;
+}
+
+%h3 {
+  @extend %headings-extend;
+  font-size: $font-size-h3;
+}
+
+%h4 {
+  @extend %headings-extend;
+  font-size: $font-size-h4;
+}
+
+%h5 {
+  @extend %headings-extend;
+  font-size: $font-size-h5;
+}
+
+%h6 {
+  @extend %headings-extend;
+  font-size: $font-size-h6;
+}
+
+h1 {
+	@extend %h1;
+}
+
+h2 {
+	@extend %h2;
+}
+
+h3 {
+	@extend %h3;
+}
+
+h4 {
+	@extend %h4;
+}
+
+h5 {
+	@extend %h5;
+}
+
+h6 {
+	@extend %h6;
+}
+
+
 %serif {
   font-family: $font-serifs;
 }

@@ -5,3 +5,45 @@
 	box-sizing: border-box;
 	padding-top: 3em;
 }
+
+.sidebyside {
+	h1,h2,h3,h4,h5,h6 {
+		display: inline-block;
+		margin-right: .5em;
+	}
+}
+
+
+%title-first {
+	@extend .row;
+	.section-title {
+		@include make-md-column(5);
+	}
+	.content {
+		// line it up with the header next to it.
+		padding-top: $font-size-h1 - 1rem;
+		@include make-md-column(6,6);
+	}
+}
+
+%title-second {
+	@extend .row;
+	.section-title {
+		@include make-md-column(5);
+		@extend %md-push-6;
+	}
+	.content {
+		// line it up with the header next to it.
+		padding-top: $font-size-h1 - 1rem;
+		@include make-md-column(6);
+		@extend %md-pull-5;
+	}
+}
+
+.products-services {
+	@extend %title-first;
+}
+
+.project {
+	@extend %title-second;
+}
