@@ -1,14 +1,17 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
+*.DS_Store
 
+# Build stuff
 node_modules
-/bower_components
-.sass-cache
-.compass/lib
-.compass/stylesheets
-.compass/templates
-.vendor
-export
+export*
+bower_components
+.bundle*
+.sass-cache*
+.compass*
+.vendor*
+.dist*
+.www*
 *.gem
 
 # Ignore paths that contain generated content.
@@ -16,9 +19,6 @@ cache/
 files/
 sites/*/files
 sites/*/private
-.dist
-.www
-
 
 # Ignore default text files
 .htaccess
