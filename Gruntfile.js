@@ -119,7 +119,7 @@ module.exports = function (grunt) {
   var gh_commit = userConfig.git.defaultCommit;
   var gh_upstream = userConfig.git.deployUpstream;
   var gh_deploy = userConfig.git.deployBranch;
-  
+
 
   //////////////////////////////
   //Grunt Config
@@ -443,7 +443,7 @@ module.exports = function (grunt) {
           process: true
         },
         files: {
-          '.compass/lib/kalamuna-style-guide.rb': ['.compass/.template/style-guide.rb']
+          '.compass/lib/kalamuna-style-guide.rb': ['style-guide.rb']
         }
       },
       gemspec: {
@@ -451,7 +451,7 @@ module.exports = function (grunt) {
           process: true
         },
         files: {
-          '.compass/kalamuna-style-guide.gemspec': ['.compass/.template/style-guide.gemspec']
+          '.compass/kalamuna-style-guide.gemspec': ['style-guide.gemspec']
         }
       }
     },
@@ -520,6 +520,9 @@ module.exports = function (grunt) {
         cmd: function(path) {
           return 'cp -r ' + distPath + ' ' + path;
         }
+      },
+      index: {
+        cmd: 'cp ' + distPath + '/logo-usage/index.html' + ' ' + distPath + '/index.html'
       },
       ext: {
         cmd: 'cd .compass && bundle exec gem build kalamuna-style-guide.gemspec && mv kalamuna-style-guide-' + userConfig.client.version + '.gem ../kalamuna-style-guide-' + userConfig.client.version + '.gem && cd ..'
@@ -590,11 +593,11 @@ module.exports = function (grunt) {
       grunt.task.run(['exec:commit:' + commit]);
     }
 
-    
+
     if (deploy) {
       grunt.task.run(['exec:deploy']);
     }
-    
+
   });
 
   //////////////////////////////
@@ -610,7 +613,7 @@ module.exports = function (grunt) {
     }
   });
 
-  
+
   //////////////////////////////
   // Deploy Task
   //////////////////////////////
@@ -629,7 +632,7 @@ module.exports = function (grunt) {
       console.log('Folder `' + path + '` removed to ensure a clean build.');
     }
 
-    grunt.task.run('build', 'exec:export:' + path);
+    grunt.task.run('build', 'exec:index', 'exec:export:' + path);
   });
 
   //////////////////////////////

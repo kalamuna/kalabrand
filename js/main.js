@@ -1,11 +1,11 @@
 (function (kala, $, console, undefined) {
-  
+
   var masonrySelectors = [
     ["#inspiration-thumbs", ".thumbnails"]
   ];
 
   kala = function () {
-    console.log("kala");
+    //console.log("kala");
   };
 
   kala.owl = {
@@ -67,7 +67,7 @@
   };
 
   var initMasonry = function () {
-    console.log(masonrySelectors);
+    //console.log(masonrySelectors);
     $(masonrySelectors).each(function () {
       var el = $(this[0]);
       var selector = this[1];
@@ -78,7 +78,7 @@
   };
 
   kala.resizePages = function () {
-    console.log($(window).height());
+   //console.log($(window).height());
     $(".page").css("height", $(document.body).height() - $("#header .navbar-fixed-top").height());
   };
 

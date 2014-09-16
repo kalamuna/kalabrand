@@ -33,8 +33,8 @@ sections:
   Style Tile: style-tile
   Inspiration: inspiration
   Type Styles: type-styles
-  Illustration: illustration
-  Components: components
+# Illustration: illustration
+# Components: components
   Colors: colors
 # Content Strategy: content
 # Elements: elements
@@ -108,7 +108,7 @@ components:
 #########################
 colors:
   # Variable names of the color variables being used
-  blacks: 
+  blacks:
     - black-tints
   kala:
     - kala-colors
@@ -139,7 +139,7 @@ colors:
 ## Server Options
 #########################
 server:
-  port: 8000
+  port: 12345
   # If remoteAccess is set to true, you will be able to access your prototype from any device connected to the same network as well as be able to remotely debug them.
   remoteAccess: false
 
@@ -149,7 +149,7 @@ server:
 export:
   path: export
   # If deploying somewhere (like GitHub Pages) where your files will not be located at the root directory, this will be the prefix that gets appended to assets run through image-url, style-url, script-url, and component-url. If they will be deployed to the root directory, set assetPrefix to ''
-  assetPrefix: page
+  assetPrefix: ''
 
 #########################
 ## Compass Options
