@@ -4,15 +4,15 @@ sites/*/*settings*.php
 
 # Build stuff
 node_modules
-export*
+export
 bower_components
-.bundle*
 .sass-cache*
 .compass*
 .vendor*
 .dist*
 .www*
 *.gem
+scripts/travis.id_rsa
 
 # Ignore paths that contain generated content.
 cache/
@@ -46,5 +46,4 @@ xmlrpc.php
 /misc
 /modules
 /profiles
-/scripts
 /themes

@@ -646,6 +646,14 @@ module.exports = function (grunt) {
     'csslint'
   ]);
 
+  //////////////////////////////
+  // Test Task
+  //////////////////////////////
+  grunt.registerTask('test', [
+    'jshint',
+    'csslint'
+  ]);
+
   grunt.registerTask('server', 'Starts a development server', function() {
 
     var launch = grunt.option('launch');
