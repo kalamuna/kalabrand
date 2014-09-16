@@ -521,6 +521,9 @@ module.exports = function (grunt) {
           return 'cp -r ' + distPath + ' ' + path;
         }
       },
+      icons: {
+        cmd: 'cp favicon.ico ' + distPath + '/favicon.ico' + ' && ' + 'cp favicon.png ' + distPath + '/favicon.png' + ' && ' + 'cp tileicon.png ' + distPath + '/tileicon.png' + ' && ' + 'cp touchicon.png ' + distPath + '/touchicon.png'
+      },
       index: {
         cmd: 'cp ' + distPath + '/logo-usage/index.html' + ' ' + distPath + '/index.html'
       },
@@ -632,7 +635,7 @@ module.exports = function (grunt) {
       console.log('Folder `' + path + '` removed to ensure a clean build.');
     }
 
-    grunt.task.run('build', 'exec:index', 'exec:export:' + path);
+    grunt.task.run('build', 'exec:index', 'exec:icons', 'exec:export:' + path);
   });
 
   //////////////////////////////
