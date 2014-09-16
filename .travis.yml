@@ -2,7 +2,8 @@ language: node_js
 node_js:
 - '0.11'
 before_install:
-- openssl aes-256-cbc -K $encrypted_54325e573e95_key -iv $encrypted_54325e573e95_iv -in scripts/travis.id_rsa.enc -out scripts/travis.id_rsa -d
+- openssl aes-256-cbc -K $encrypted_4ebc0dba08bd_key -iv $encrypted_4ebc0dba08bd_iv
+  -in scripts/travis.id_rsa.enc -out scripts/travis.id_rsa -d
 - cp scripts/travis-ci.sh $HOME/
 - chmod +x $HOME/travis-ci.sh
 - cp scripts/ssh-config $HOME/.ssh/config
