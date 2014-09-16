@@ -50,6 +50,7 @@ after-success() {
   if [ $TRAVIS_BRANCH == "master" ] &&
      [ $TRAVIS_PULL_REQUEST == "false" ] &&
      [ $TRAVIS_REPO_SLUG == "kalamuna/kalabrand" ]; then
+    openssl aes-256-cbc -K $encrypted_54325e573e95_key -iv $encrypted_54325e573e95_iv -in scripts/travis.id_rsa.enc -out scripts/travis.id_rsa -d
     grunt export
     chmod 600 $TRAVIS_BUILD_DIR/scripts/travis.id_rsa
     eval "$(ssh-agent)"
